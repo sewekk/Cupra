@@ -1,0 +1,58 @@
+.introduction-section {
+  height: 80vh;
+  background-image: url("../assets/cupraBackground.png");
+  background-position: 85%;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    align-items: center;
+
+    @media screen and (min-width: map-get($brake-points, large)) {
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
+  }
+
+  &__cart {
+    width: 100%;
+    font-weight: 300;
+    text-align: center;
+
+    @media screen and (min-width: map-get($brake-points, medium)) {
+      width: 80%;
+    }
+    @media screen and (min-width: map-get($brake-points, large)) {
+      width: 70%;
+      text-align: left;
+      margin-bottom: 5%;
+    }
+    @media screen and (min-width: map-get($brake-points, xx-large)) {
+      width: 50%;
+    }
+  }
+
+  &__title {
+    font-size: $base-font-size;
+    opacity: 50%;
+    padding: 10px 0;
+  }
+
+  &__content {
+    font-size: 35px;
+    padding: 10px 0;
+
+    @media screen and (min-width: map-get($brake-points, medium)) {
+      font-size: 45px;
+    }
+    @media screen and (min-width: map-get($brake-points, x-large)) {
+      font-size: 55px;
+    }
+  }
+
+  button {
+    margin: 50px 0;
+  }
+}

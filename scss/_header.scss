@@ -1,11 +1,11 @@
 .full-width {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .header {
-  display: flex;
   height: 70px;
-  justify-content: center;
   background-color: $base-bright-color;
   position: sticky;
   z-index: 1000;
@@ -26,4 +26,9 @@
 
 .hamburger {
   position: relative;
+  padding-left: 30px;
+
+  @media screen and (min-width: map-get($brake-points, small)) {
+    padding: 0;
+  }
 }

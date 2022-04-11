@@ -186,6 +186,10 @@ input {
   width: 150px;
 }
 
+.button--typeThree {
+  width: 220px;
+}
+
 .button-transparent {
   background-color: transparent;
   border: 1px solid #1b1b1b;
@@ -207,18 +211,24 @@ input {
   border: none;
 }
 
-.full-width {
-  width: 100%;
+.button-sand {
+  background-color: #dbd3cb;
+  border: 1px solid #dbd3cb;
+  color: #000000;
 }
 
-.header {
+.full-width {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 70px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.header {
+  height: 70px;
   background-color: #f5f5f5;
   position: -webkit-sticky;
   position: sticky;
@@ -247,6 +257,13 @@ input {
 
 .hamburger {
   position: relative;
+  padding-left: 30px;
+}
+
+@media screen and (min-width: 575px) {
+  .hamburger {
+    padding: 0;
+  }
 }
 
 .mobile-menu {
@@ -397,6 +414,90 @@ input {
 
 .desktop-menu .list__link:hover {
   text-decoration: underline;
+}
+
+.introduction-section {
+  height: 80vh;
+  background-image: url("../assets/cupraBackground.png");
+  background-position: 85%;
+  background-size: cover;
+}
+
+.introduction-section__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 990px) {
+  .introduction-section__container {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.introduction-section__cart {
+  width: 100%;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media screen and (min-width: 765px) {
+  .introduction-section__cart {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .introduction-section__cart {
+    width: 70%;
+    text-align: left;
+    margin-bottom: 5%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .introduction-section__cart {
+    width: 50%;
+  }
+}
+
+.introduction-section__title {
+  font-size: 16px;
+  opacity: 50%;
+  padding: 10px 0;
+}
+
+.introduction-section__content {
+  font-size: 35px;
+  padding: 10px 0;
+}
+
+@media screen and (min-width: 765px) {
+  .introduction-section__content {
+    font-size: 45px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .introduction-section__content {
+    font-size: 55px;
+  }
+}
+
+.introduction-section button {
+  margin: 50px 0;
 }
 
 body {
