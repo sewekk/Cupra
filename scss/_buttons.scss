@@ -1,0 +1,35 @@
+.button {
+  cursor: pointer;
+  height: 50px;
+  font-size: $base-font-size;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.button--typeOne {
+  width: 196px;
+}
+
+.button--typeTwo {
+  width: 150px;
+}
+
+.button-transparent {
+  background-color: transparent;
+  border: 1px solid $base-dark-color;
+  color: $base-dark-color;
+
+  &:hover {
+    border: 2px solid $base-dark-color;
+  }
+}
+
+.button-dark {
+  background-color: $button-dark-color;
+  color: #ffffff;
+  border: 2px solid $button-dark-color;
+
+  &:hover {
+    background-color: #75787b;
+    border: none;
+  }
+}

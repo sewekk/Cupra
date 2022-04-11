@@ -1,0 +1,29 @@
+.full-width {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  background-color: $base-bright-color;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    background-color: $base-bright-color;
+    align-items: center;
+  }
+
+  &__logo {
+    flex-basis: 150px;
+  }
+}
+
+.hamburger {
+  position: relative;
+}

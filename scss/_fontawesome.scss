@@ -1,0 +1,20 @@
+.fa-bars,
+.fa-xmark {
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  display: none;
+}
+
+.fa-show {
+  display: block;
+
+  @media screen and (min-width: map-get($brake-points, x-large)) {
+    display: none;
+    position: absolute;
+    top: 100px;
+  }
+}
