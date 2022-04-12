@@ -42,4 +42,9 @@
   background-color: $sand-color;
   border: 1px solid $sand-color;
   color: $secondary-dark-color;
+  font-weight: 500;
+
+  &:hover {
+    background-color: #ffffff;
+  }
 }

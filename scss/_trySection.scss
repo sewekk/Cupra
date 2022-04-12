@@ -1,0 +1,167 @@
+.try-section {
+  min-height: 100vh;
+  background-color: $base-dark-color;
+
+  &__container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: map-get($brake-points, large)) {
+      justify-content: space-between;
+    }
+  }
+
+  .description {
+    width: 100%;
+    min-height: 20%;
+    color: #ffffff;
+    text-align: center;
+    margin: 50px 0;
+    font-weight: 300;
+
+    @media screen and (min-width: map-get($brake-points, medium)) {
+      width: 80%;
+    }
+
+    @media screen and (min-width: map-get($brake-points, large)) {
+      width: 60%;
+    }
+
+    @media screen and (min-width: map-get($brake-points, x-large)) {
+      margin: 90px 0 75px 0;
+      width: 40%;
+      text-align: left;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-size: 35px;
+      padding: 20px 0;
+
+      @media screen and (min-width: map-get($brake-points, medium)) {
+        font-size: 45px;
+      }
+
+      @media screen and (min-width: map-get($brake-points, x-large)) {
+        font-size: 60px;
+      }
+    }
+
+    &__text {
+      opacity: 50%;
+      line-height: 120%;
+      font-size: $base-font-size;
+
+      @media screen and (min-width: map-get($brake-points, large)) {
+        font-size: $seconadry-font-size;
+      }
+
+      @media screen and (min-width: map-get($brake-points, x-large)) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .img-cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    flex-basis: 100%;
+    height: 30%;
+    color: #ffffff;
+
+    @media screen and (min-width: map-get($brake-points, large)) {
+      flex-basis: 38%;
+      margin-top: 80px;
+    }
+
+    &__img {
+      width: 80%;
+      height: 80%;
+
+      @media screen and (min-width: map-get($brake-points, large)) {
+        width: 100%;
+        height: 100%;
+        justify-self: center;
+      }
+
+      &--height {
+        height: 85%;
+      }
+    }
+
+    &__text {
+      opacity: 50%;
+      text-align: center;
+      line-height: $base-line-height;
+      font-weight: 300;
+      padding: 30px 0;
+      font-size: $seconadry-font-size;
+
+      @media screen and (min-width: map-get($brake-points, large)) {
+        font-size: $base-font-size;
+        text-align: left;
+        width: 100%;
+        padding: 20px 0;
+      }
+    }
+
+    &--bigger {
+      @media screen and (min-width: map-get($brake-points, large)) {
+        flex-basis: 59%;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .information {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 300;
+
+    @media screen and (min-width: map-get($brake-points, medium)) {
+      width: 80%;
+    }
+
+    @media screen and (min-width: map-get($brake-points, large)) {
+      width: 60%;
+      transform: translateY(-100px);
+      text-align: left;
+    }
+
+    @media screen and (min-width: map-get($brake-points, x-large)) {
+      margin-top: 90px;
+      min-height: 10%;
+      width: 40%;
+      transform: translateY(-220px);
+    }
+
+    &__title {
+      text-transform: uppercase;
+      padding-bottom: 20px;
+      font-size: 28px;
+
+      @media screen and (min-width: map-get($brake-points, medium)) {
+        font-size: 35px;
+      }
+
+      @media screen and (min-width: map-get($brake-points, x-large)) {
+        font-size: 40px;
+      }
+    }
+
+    &__text {
+      opacity: 50%;
+      padding-bottom: 20px;
+      line-height: 120%;
+    }
+
+    button {
+      margin-bottom: 20px;
+    }
+  }
+}

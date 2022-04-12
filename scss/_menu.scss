@@ -1,7 +1,7 @@
 .mobile-menu {
   position: absolute;
   z-index: 100;
-  top: 70px;
+  top: 85px;
   left: 0;
   width: 100%;
   min-height: 380px;
@@ -86,9 +86,10 @@
   }
 
   &__list {
-    flex-basis: 50%;
+    flex-basis: 45%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    margin-left: 25px;
   }
 
   &__text {
@@ -103,11 +104,18 @@
 
   &__buttons-container {
     margin-left: 15px;
+
+    .button-dark {
+      margin-left: 15px;
+    }
   }
   .list {
     &__link {
       color: $base-dark-color;
+      font-size: 16px;
       text-decoration: none;
+      font-weight: 500;
+
       &:hover {
         text-decoration: underline;
       }

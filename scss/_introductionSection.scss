@@ -1,7 +1,7 @@
 .introduction-section {
-  height: 80vh;
+  height: 85vh;
   background-image: url("../assets/cupraBackground.png");
-  background-position: 85%;
+  background-position: 85% 100%;
   background-size: cover;
 
   &__container {
@@ -35,7 +35,7 @@
   }
 
   &__title {
-    font-size: $base-font-size;
+    font-size: 20px;
     opacity: 50%;
     padding: 10px 0;
   }
