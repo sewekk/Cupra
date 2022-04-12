@@ -156,12 +156,13 @@
 
     &__text {
       opacity: 50%;
+      font-size: 20px;
       padding-bottom: 20px;
       line-height: 120%;
     }
 
     button {
-      margin-bottom: 20px;
+      margin: 10px 0 20px 0;
     }
   }
 }
