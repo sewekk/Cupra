@@ -1,0 +1,142 @@
+.advantages-section {
+  min-height: 70vh;
+  background-color: $base-dark-color;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    margin: 90px 0;
+    height: 30vh;
+    width: 105%;
+    background-image: url("../assets/formentorBackground.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border-radius: 10px;
+
+    @media screen and (min-width: map-get($brake-points, medium)) {
+      height: 50vh;
+    }
+    @media screen and (min-width: map-get($brake-points, x-large)) {
+      height: 70vh;
+      border-radius: 0;
+    }
+  }
+
+  .image {
+    &__title {
+      font-size: 20px;
+      color: #ffffff;
+      padding: 20px 10px;
+      font-weight: 300;
+
+      @media screen and (min-width: map-get($brake-points, small)) {
+        font-size: 28px;
+      }
+
+      @media screen and (min-width: map-get($brake-points, medium)) {
+        font-size: 40px;
+        padding: 40px 20px;
+      }
+
+      @media screen and (min-width: map-get($brake-points, xx-large)) {
+        font-size: 60px;
+      }
+    }
+  }
+
+  &__information {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #ffffff;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 90px;
+
+    @media screen and (min-width: map-get($brake-points, large)) {
+      justify-content: flex-start;
+    }
+
+    @media screen and (min-width: map-get($brake-points, x-large)) {
+      width: 100%;
+    }
+  }
+
+  .information {
+    &__title {
+      font-size: 30px;
+
+      @media screen and (min-width: map-get($brake-points, small)) {
+        font-size: 40px;
+      }
+
+      @media screen and (min-width: map-get($brake-points, large)) {
+        font-size: 45px;
+      }
+
+      @media screen and (min-width: map-get($brake-points, xx-large)) {
+        font-size: 60px;
+      }
+    }
+
+    @media screen and (min-width: map-get($brake-points, large)) {
+      justify-content: space-between;
+    }
+
+    &__buttons-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+      width: 100%;
+
+      @media screen and (min-width: map-get($brake-points, medium)) {
+        width: 50%;
+        margin: 20px 20px;
+        justify-content: flex-end;
+      }
+
+      .button-transparent {
+        color: #ffffff;
+        border: #ffffff solid 1px;
+        margin: 0 20px;
+        z-index: 5;
+        &:hover {
+          border: 2px solid #ffffff;
+        }
+      }
+    }
+
+    &__text {
+      opacity: 50%;
+      font-size: $seconadry-font-size;
+
+      @media screen and (min-width: map-get($brake-points, medium)) {
+        width: 75%;
+      }
+
+      @media screen and (min-width: map-get($brake-points, large)) {
+        text-align: left;
+        font-size: 20px;
+        padding: 10px 0;
+        width: 60%;
+      }
+
+      @media screen and (min-width: map-get($brake-points, large)) {
+        width: 55%;
+      }
+
+      @media screen and (min-width: map-get($brake-points, x-large)) {
+        width: 45%;
+      }
+    }
+  }
+}

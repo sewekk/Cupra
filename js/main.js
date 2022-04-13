@@ -113,3 +113,38 @@ showOrHideInformation(desktopViewport.matches);
 desktopViewport.addListener((isDesktop) => {
   showOrHideInformation(isDesktop.matches);
 });
+
+$(document).ready(function () {
+  $(".slider__container").slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    dots: true,
+    prevArrow: "",
+    nextArrow: ".slider-next-btn",
+    dotsClass: "dots-container",
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 990,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 765,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+});
