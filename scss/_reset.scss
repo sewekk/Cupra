@@ -144,13 +144,40 @@ input {
   font-weight: 600;
 }
 
-.slider-btn {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  cursor: pointer;
+.information-block {
+  height: 440px;
+  background-color: #093e52;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-weight: 300;
+
+  &__title {
+    opacity: 50%;
+    font-size: $seconadry-font-size;
+    padding-bottom: 25px;
+
+    @media screen and (min-width: map-get($brake-points, large)) {
+      font-size: $base-font-size;
+    }
+  }
+
+  &__text {
+    // padding: 15px 0;
+    font-size: 30px;
+
+    @media screen and (min-width: map-get($brake-points, large)) {
+      font-size: 36px;
+    }
+
+    @media screen and (min-width: map-get($brake-points, xx-large)) {
+      font-size: 40px;
+    }
+  }
+
+  button {
+    margin-top: 45px;
+  }
 }

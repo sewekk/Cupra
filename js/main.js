@@ -1,4 +1,5 @@
 "use strict";
+
 //variables
 const hamburger = document.querySelectorAll(".hamburger-menu");
 const mobileMenu = document.querySelector(".mobile-menu");
@@ -7,6 +8,14 @@ const carouselPrevBtn = document.querySelector(".prev-btn");
 const carouselNextBtn = document.querySelector(".next-btn");
 let CarouselLeftStartedValue = -100;
 let counter = 3;
+const pathToImages = {
+  first: [
+    "../assets/imagesSection/1stSlider/wheel.png",
+    "../assets/imagesSection/1stSlider/carInside.png",
+  ],
+  second: [],
+  third: [],
+};
 
 const desktopViewport = window.matchMedia("screen and (min-width:990px)");
 
@@ -21,6 +30,7 @@ carouselPrevBtn.addEventListener("click", () => {
     counter = 1;
     return;
   }
+
   carousel("+");
   if (window.innerWidth < 990) showOrHideInformation(false);
 });
@@ -31,6 +41,7 @@ carouselNextBtn.addEventListener("click", () => {
     counter = 6;
     return;
   }
+
   carousel("-");
   if (window.innerWidth < 990) {
     showOrHideInformation(false);
@@ -108,12 +119,14 @@ function showMenu() {
   });
 }
 
+//Viewport for carousel
 showOrHideInformation(desktopViewport.matches);
 
 desktopViewport.addListener((isDesktop) => {
   showOrHideInformation(isDesktop.matches);
 });
 
+//slider by slidedjs and jquery
 $(document).ready(function () {
   $(".slider__container").slick({
     slidesToShow: 3,
@@ -135,7 +148,7 @@ $(document).ready(function () {
         breakpoint: 990,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
         },
       },
       {
@@ -148,3 +161,7 @@ $(document).ready(function () {
     ],
   });
 });
+
+setTimeout(() => {
+  document.querySelector(".test").src = `${pathToImages.first[1]}`;
+}, 3000);

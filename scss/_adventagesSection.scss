@@ -118,6 +118,7 @@
     &__text {
       opacity: 50%;
       font-size: $seconadry-font-size;
+      line-height: 120%;
 
       @media screen and (min-width: map-get($brake-points, medium)) {
         width: 75%;

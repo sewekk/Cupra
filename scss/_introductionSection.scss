@@ -27,10 +27,10 @@
     @media screen and (min-width: map-get($brake-points, large)) {
       width: 70%;
       text-align: left;
-      margin-bottom: 5%;
+      margin-bottom: 4%;
     }
     @media screen and (min-width: map-get($brake-points, xx-large)) {
-      width: 50%;
+      width: 55%;
     }
   }
 
@@ -42,7 +42,7 @@
 
   &__content {
     font-size: 35px;
-    padding: 10px 0;
+    line-height: 120%;
 
     @media screen and (min-width: map-get($brake-points, medium)) {
       font-size: 45px;
@@ -53,6 +53,6 @@
   }
 
   button {
-    margin: 50px 0;
+    margin: 50px 0 70px 0;
   }
 }
