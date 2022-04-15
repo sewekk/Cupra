@@ -8,14 +8,8 @@ const carouselPrevBtn = document.querySelector(".prev-btn");
 const carouselNextBtn = document.querySelector(".next-btn");
 let CarouselLeftStartedValue = -100;
 let counter = 3;
-const pathToImages = {
-  first: [
-    "../assets/imagesSection/1stSlider/wheel.png",
-    "../assets/imagesSection/1stSlider/carInside.png",
-  ],
-  second: [],
-  third: [],
-};
+const nextSlideButtons = document.querySelectorAll(".next-slide");
+const prevSlideButtons = document.querySelectorAll(".prev-slide");
 
 const desktopViewport = window.matchMedia("screen and (min-width:990px)");
 
@@ -46,6 +40,18 @@ carouselNextBtn.addEventListener("click", () => {
   if (window.innerWidth < 990) {
     showOrHideInformation(false);
   }
+});
+
+nextSlideButtons.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    nextSlide(e);
+  });
+});
+
+prevSlideButtons.forEach((item) => {
+  item.addEventListener("click", (item) => {
+    prevSlide(item);
+  });
 });
 
 //setting carousel start values
@@ -129,32 +135,25 @@ desktopViewport.addListener((isDesktop) => {
 //slider by slidedjs and jquery
 $(document).ready(function () {
   $(".slider__container").slick({
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     dots: true,
     prevArrow: "",
     nextArrow: ".slider-next-btn",
     dotsClass: "dots-container",
+    mobileFirst: true,
     responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-        },
-      },
       {
         breakpoint: 990,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToShow: 3,
+          slidesToScroll: 3,
         },
       },
       {
         breakpoint: 765,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -162,6 +161,40 @@ $(document).ready(function () {
   });
 });
 
-setTimeout(() => {
-  document.querySelector(".test").src = `${pathToImages.first[1]}`;
-}, 3000);
+//slider for images section
+
+function nextSlide({ currentTarget }) {
+  const ParentElement = currentTarget.parentNode;
+  const images = [...ParentElement.querySelectorAll(".img-slider__img")];
+
+  for (let [index, element] of images.entries()) {
+    if (element.classList.contains("active")) {
+      if (index === images.length - 1) {
+        element.classList.remove("active");
+        images[0].classList.add("active");
+        break;
+      }
+      element.classList.remove("active");
+      images[index + 1].classList.add("active");
+      break;
+    }
+  }
+}
+
+function prevSlide({ currentTarget }) {
+  const ParentElement = currentTarget.parentNode;
+  const images = [...ParentElement.querySelectorAll(".img-slider__img")];
+
+  for (let [index, element] of images.entries()) {
+    if (element.classList.contains("active")) {
+      if (index === 0) {
+        element.classList.remove("active");
+        images[images.length - 1].classList.add("active");
+        break;
+      }
+      element.classList.remove("active");
+      images[index - 1].classList.add("active");
+      break;
+    }
+  }
+}

@@ -145,7 +145,7 @@ input {
 }
 
 .information-block {
-  height: 440px;
+  height: 300px;
   background-color: #093e52;
   display: flex;
   flex-direction: column;
@@ -153,6 +153,10 @@ input {
   align-items: center;
   color: white;
   font-weight: 300;
+
+  @media screen and (min-width: map-get($brake-points, large)) {
+    height: 440px;
+  }
 
   &__title {
     opacity: 50%;
@@ -165,8 +169,8 @@ input {
   }
 
   &__text {
-    // padding: 15px 0;
     font-size: 30px;
+    text-align: center;
 
     @media screen and (min-width: map-get($brake-points, large)) {
       font-size: 36px;
