@@ -6,6 +6,7 @@
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
+    height: 80%;
   }
 
   .cart {
@@ -196,6 +197,6 @@
 
   .information-block {
     flex-basis: 85%;
-    height: 440px;
+    margin: 100px 0;
   }
 }

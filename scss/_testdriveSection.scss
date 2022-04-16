@@ -1,0 +1,110 @@
+.testDrive-section {
+  min-height: 100vh;
+  background-color: $base-bright-color;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .dropdown {
+    // width: 45%;
+    width: 100%;
+    height: 145px;
+    transition: 0.3s;
+
+    @media screen and (min-width: map-get($brake-points, medium)) {
+      width: 75%;
+    }
+
+    @media screen and (min-width: map-get($brake-points, large)) {
+      width: 55%;
+    }
+
+    @media screen and (min-width: map-get($brake-points, xx-large)) {
+      width: 45%;
+    }
+
+    &__list {
+      height: 100%;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer;
+      border: 1px solid #bababa;
+      height: 0px;
+      transition: 0.3s;
+      border: none;
+      font-size: 0;
+    }
+
+    .item {
+      &__img {
+        width: 50%;
+        height: 90%;
+
+        @media screen and (min-width: map-get($brake-points, x-large)) {
+          height: 100%;
+        }
+      }
+
+      p {
+        flex-basis: 40%;
+        font-weight: 600;
+      }
+
+      &--selected {
+        height: 100%;
+        border: 1px solid #bababa;
+        font-size: $base-font-size;
+      }
+
+      &--active {
+        height: 100%;
+        border: 1px solid #bababa;
+        font-size: $base-font-size;
+        border-bottom: none;
+      }
+
+      &--border-bottom {
+        border-bottom: 1px solid #bababa;
+      }
+    }
+  }
+
+  .title {
+    margin: 100px 0 60px 0;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+      color: #000000;
+      font-weight: 300;
+      font-size: 25px;
+      padding-bottom: 20px;
+
+      @media screen and (min-width: map-get($brake-points, x-large)) {
+        font-size: 16px;
+      }
+    }
+
+    &__content {
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 3rem;
+
+      @media screen and (min-width: map-get($brake-points, x-large)) {
+        font-size: 36px;
+        width: 30%;
+      }
+    }
+  }
+}

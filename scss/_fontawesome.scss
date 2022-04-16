@@ -9,6 +9,14 @@
   display: none;
 }
 
+.fa-angle-down {
+  transition: 0.3s;
+
+  &--active {
+    transform: rotate(-180deg);
+  }
+}
+
 .fa-show {
   display: block;
 

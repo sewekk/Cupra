@@ -6,11 +6,16 @@ const mobileMenu = document.querySelector(".mobile-menu");
 const carouselArticles = document.querySelectorAll(".carousel-section__car");
 const carouselPrevBtn = document.querySelector(".prev-btn");
 const carouselNextBtn = document.querySelector(".next-btn");
-let CarouselLeftStartedValue = -100;
-let counter = 3;
 const nextSlideButtons = document.querySelectorAll(".next-slide");
 const prevSlideButtons = document.querySelectorAll(".prev-slide");
-
+const selectedItem = document.getElementById("selected");
+const selectedImg = document.querySelector(".item__img--selected");
+const selectedName = document.querySelector(".item__name--selected");
+const dropDownItems = document.querySelectorAll(".dropdown__item");
+const DropDownArrow = document.querySelector(".fa-angle-down");
+let dropDownOpen = false;
+let CarouselLeftStartedValue = -100;
+let counter = 3;
 const desktopViewport = window.matchMedia("screen and (min-width:990px)");
 
 //Event Listners
@@ -52,6 +57,19 @@ prevSlideButtons.forEach((item) => {
   item.addEventListener("click", (item) => {
     prevSlide(item);
   });
+});
+
+selectedItem.addEventListener("click", (e) => {
+  const dropDownContainer = e.currentTarget.parentNode.parentNode;
+  dropDown(dropDownContainer);
+});
+
+dropDownItems.forEach((item, index) => {
+  if (index > 0) {
+    item.addEventListener("click", (event) => {
+      changeDropDownValue(event);
+    });
+  }
 });
 
 //setting carousel start values
@@ -197,4 +215,35 @@ function prevSlide({ currentTarget }) {
       break;
     }
   }
+}
+
+//dropDown mechanism
+function dropDown(dropDownContainer) {
+  if (!dropDownOpen) {
+    dropDownContainer.style.marginBottom = `${
+      (dropDownItems.length - 1) * 145 + 20
+    }px`;
+
+    dropDownOpen = true;
+  } else {
+    dropDownContainer.style.marginBottom = "20px";
+    dropDownOpen = false;
+  }
+
+  DropDownArrow.classList.toggle("fa-angle-down--active");
+
+  dropDownItems.forEach((item) => {
+    item.classList.toggle("item--active");
+  });
+}
+
+function changeDropDownValue({ currentTarget }) {
+  const dropDownContainer = currentTarget.parentNode.parentNode;
+  const newImg = currentTarget.querySelector("img").src;
+  const newName = currentTarget.querySelector("p").textContent;
+
+  selectedImg.src = `${newImg}`;
+  selectedName.textContent = newName;
+
+  dropDown(dropDownContainer);
 }
