@@ -1,0 +1,107 @@
+.findus-section {
+  min-height: 80vh;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 100px 0 60px 0;
+    font-weight: 300;
+
+    &__title {
+      padding-bottom: 10px;
+    }
+
+    &__content {
+      font-size: 30px;
+      width: 90%;
+      line-height: 40px;
+
+      @media screen and (min-width: map-get($brake-points, medium)) {
+        width: 60%;
+      }
+
+      @media screen and (min-width: map-get($brake-points, large)) {
+        font-size: 2rem;
+        width: 55%;
+      }
+    }
+  }
+
+  .carts-container {
+    width: 100%;
+    min-height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: map-get($brake-points, large)) {
+      justify-content: space-between;
+    }
+  }
+
+  .cart {
+    width: 90%;
+    min-height: 430px;
+    background-color: white;
+    // margin-bottom: 30px;
+
+    @media screen and (min-width: map-get($brake-points, large)) {
+      width: 49%;
+    }
+
+    &__map {
+      width: 100%;
+      height: 400px;
+
+      @media screen and (min-width: map-get($brake-points, large)) {
+        height: 430px;
+      }
+    }
+
+    .list {
+      width: 80%;
+      background-color: white;
+      transform: translateY(-70px);
+
+      @media screen and (min-width: map-get($brake-points, medium)) {
+        width: 60%;
+      }
+
+      &__item {
+        padding-left: 32px;
+        line-height: 26px;
+        font-weight: 300;
+        text-decoration: none;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &--first {
+          padding: 32px 0 0 32px;
+          font-weight: 500;
+        }
+
+        &--blue {
+          color: #007bff;
+
+          &:hover {
+            text-decoration: underline;
+            transform: translateX(-20px);
+          }
+        }
+        button {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}
