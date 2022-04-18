@@ -17,6 +17,20 @@
   width: 220px;
 }
 
+.button-typeFour {
+  width: 175px;
+  border-radius: 25px;
+  background-color: $button-dark-color;
+  color: #ffffffff;
+  border: 1px solid $button-dark-color;
+  position: relative;
+
+  &:hover {
+    background-color: #75787b;
+    border: none;
+  }
+}
+
 .button-transparent {
   background-color: transparent;
   border: 1px solid $base-dark-color;

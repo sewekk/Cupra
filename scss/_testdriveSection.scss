@@ -5,13 +5,13 @@
   &__container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
 
   .dropdown {
-    // width: 45%;
-    width: 100%;
+    width: 95%;
     height: 145px;
     transition: 0.3s;
 
@@ -29,6 +29,9 @@
 
     &__list {
       height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     &__item {
@@ -36,7 +39,7 @@
       justify-content: flex-start;
       align-items: center;
       cursor: pointer;
-      border: 1px solid #bababa;
+      border: 1px solid #d5d5d5;
       height: 0px;
       transition: 0.3s;
       border: none;
@@ -44,35 +47,41 @@
     }
 
     .item {
+      width: 90%;
+
       &__img {
-        width: 50%;
-        height: 90%;
+        width: 60%;
+        height: 70%;
+
+        @media screen and (min-width: map-get($brake-points, small)) {
+          height: 90%;
+        }
 
         @media screen and (min-width: map-get($brake-points, x-large)) {
-          height: 100%;
+          width: 55%;
         }
       }
 
       p {
-        flex-basis: 40%;
+        flex-basis: 35%;
         font-weight: 600;
       }
 
       &--selected {
         height: 100%;
-        border: 1px solid #bababa;
+        border: 1px solid #d5d5d5;
         font-size: $base-font-size;
       }
 
       &--active {
         height: 100%;
-        border: 1px solid #bababa;
+        border: 1px solid #d5d5d5;
         font-size: $base-font-size;
         border-bottom: none;
       }
 
       &--border-bottom {
-        border-bottom: 1px solid #bababa;
+        border-bottom: 1px solid #d5d5d5;
       }
     }
   }
@@ -104,6 +113,79 @@
       @media screen and (min-width: map-get($brake-points, x-large)) {
         font-size: 36px;
         width: 30%;
+      }
+    }
+  }
+
+  .form {
+    margin-top: 30px;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    color: black;
+
+    @media screen and (min-width: map-get($brake-points, medium)) {
+      width: 75%;
+    }
+
+    @media screen and (min-width: map-get($brake-points, large)) {
+      width: 55%;
+    }
+
+    @media screen and (min-width: map-get($brake-points, xx-large)) {
+      width: 45%;
+    }
+
+    &__input-text {
+      border: none;
+      border-bottom: 1px solid #d5d5d5;
+      background-color: transparent;
+      font-size: 16px;
+      padding: 12px 12px;
+      width: 90%;
+      font-weight: 500;
+      margin-bottom: 30px;
+
+      &::placeholder {
+        color: #000000;
+      }
+
+      @media screen and (min-width: map-get($brake-points, small)) {
+        padding: 12px 0;
+      }
+    }
+
+    &__information {
+      font-size: 13px;
+      margin-bottom: 30px;
+      font-weight: 400;
+      line-height: 21px;
+
+      &--opacity {
+        font-weight: 300;
+        flex-basis: 90%;
+      }
+
+      a {
+        color: #000000;
+      }
+    }
+
+    &__checkbox-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+
+      input {
+        margin-right: 10px;
+        border: 1px solid #d5d5d5;
+      }
+
+      label {
+        flex-grow: 1;
       }
     }
   }
