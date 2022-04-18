@@ -81,7 +81,6 @@ main {
 body {
   line-height: 1;
   font-family: "Open Sans", sans-serif;
-  overflow-x: hidden;
 }
 
 ol,
@@ -478,6 +477,8 @@ input {
   font-size: 26px;
   position: relative;
   font-weight: 600;
+  color: #000000;
+  text-decoration: none;
 }
 
 .mobile-menu__text::after {
@@ -1002,7 +1003,8 @@ input {
 }
 
 .carousel-section button {
-  margin-top: 45px;
+  -webkit-transform: translateY(-45px);
+          transform: translateY(-45px);
   padding: 15px;
 }
 
@@ -1224,7 +1226,7 @@ input {
 .advantages-section .information__buttons-container .button-transparent {
   color: #ffffff;
   border: #ffffff solid 1px;
-  margin: 0 20px;
+  margin-right: 20px;
   z-index: 5;
 }
 
@@ -1430,6 +1432,15 @@ input {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .images-section .cart__img .next-btn {
@@ -1861,7 +1872,6 @@ input {
 
 .testDrive-section .form__checkbox-container input {
   margin-right: 10px;
-  border: 1px solid #d5d5d5;
 }
 
 .testDrive-section .form__checkbox-container label {
@@ -2414,5 +2424,9 @@ input {
   .footer .social__item--second {
     margin: 0;
   }
+}
+
+main {
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=main.css.map */
