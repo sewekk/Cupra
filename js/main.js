@@ -11,7 +11,6 @@ const selectedName = document.querySelector(".item__name--selected");
 const dropDownItems = document.querySelectorAll(".dropdown__item");
 const DropDownArrow = document.querySelector(".fa-angle-down");
 let dropDownOpen = false;
-let CarouselLeftStartedValue = -100;
 let counter = 3;
 const desktopViewport = window.matchMedia("screen and (min-width:990px)");
 
